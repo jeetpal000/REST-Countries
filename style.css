@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+:root{
+    --back-ground-color: rgb(255, 255, 255); 
+    --text-color: rgba(34, 34, 34, 0.981);
+    --element-bg-color: rgb(242, 242, 242);
+}
+[data-theme="dark"]{
+  --back-ground-color: rgb(34, 34, 43);
+  --text-color: rgb(251, 251, 251);
+  --element-bg-color: rgba(48, 52, 58, 0.864);
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--back-ground-color);
+  color: var(--text-color);
+  transition: all 0.5s;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-size: 20px !important;
+  box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+  min-height: 101vh;
+  position: relative;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px -2px #808080c7;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  background-color: var(--back-ground-color);
+  color: var(--text-color);
+   transition: all 0.5s;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+.dark-mode-container{
+  cursor: pointer;
+  box-shadow: 0px 3px 3px rgba(193, 192, 192, 0.853);
+  padding: 5px 3px;
+  border-radius: 4px;
+}
+
+.search-section {
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding: 10px 0px;
+  /* background: #f1f0f0; */
+  border-radius: 4px;
+  box-shadow: 0px 3px 3px rgba(193, 192, 192, 0.853);
+}
+.input-container i {
+  color: var(--text-color);
+  padding-left: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+   transition: all 0.3s;
+}
+.input-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: inherit;
+  /* background: #f1f0f0; */
+  background-color: var(--back-ground-color);
+  transition: all 0.5s;
+  color: var(--text-color);
+}
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+}
+.select-container select {
+  border-radius: 4px;
+  box-shadow: 0px 3px 3px rgba(193, 192, 192, 0.853);
+  background-color: var(--back-ground-color);
+  width: 100%;
+  padding: 10px 0px;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  color: var(--text-color);
+   transition: all 0.5s;
+}
+.country-section {
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+
+}
+.country-section .country {
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(169, 169, 169, 0.853);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--element-bg-color);
+   transition: all 0.5s;
+}
+.country .country-image img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.country:hover .country-image img{
+  transform: scale(1.1);
+}
+.country .country-content {
+  padding: 10px;
+}
+.country-content h3 {
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+.country-content h4 {
+  font-size: 1rem;
+  padding: 3px 0px;
+  color: var(--text-color)
+}
+.population,
+.region,
+.capital {
+  font-weight: 400;
+}
+.top-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.697);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.top-btn.show {
+  display: flex;
+  opacity: 1;
+}
+
+
+
+
+@media (max-width: 850px) {
+  .country-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .country-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  header .logo {
+    font-size: 1.2rem;
+  }
+  .dark-mode-container div span {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 426px) {
+  .country-section {
+    grid-template-columns: 1fr;
+    padding: 0rem 2.5rem;
+  }
+  .top-btn{
+    bottom: 20px;
+  }
+}
