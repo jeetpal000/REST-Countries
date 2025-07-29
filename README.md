@@ -1,6 +1,6 @@
-# 🌍 REST Countries Explorer
+ú# 🌍 REST Countries Explorer
 
-A sleek, responsive web app that lets users explore detailed information about countries using the [REST Countries API](https://restcountries.com/). Built with HTML, CSS, and JavaScript, this project showcases dynamic data fetching, interactive UI, and clean design.
+A sleek, responsive web app that lets users explore detailed information about countries using the REST Countries API. Built with HTML, CSS, and JavaScript, this project showcases dynamic data fetching, interactive UI, and clean design.
 
 ## 🚀 Features
 
@@ -21,7 +21,8 @@ A sleek, responsive web app that lets users explore detailed information about c
 
 ## 🌐 Live Demo
 
-_Deploy it via GitHub Pages or Netlify and add the link here._
+_Deploy it via GitHub Pages or Netlify and add the link here._ 
+[REST Countries](https://jeetpal000.github.io/REST-Countries/)
 
 ## 📬 Contact
 
